@@ -43,5 +43,19 @@
 
   <build>
     <finalName>routecrafter-web</finalName>
+    <plugins>
+      <!-- Plugin de Jetty para correr el servidor embebido -->
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.4.54.v20240208</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+          <webApp>
+            <contextPath>/routecrafter-web</contextPath>
+          </webApp>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
